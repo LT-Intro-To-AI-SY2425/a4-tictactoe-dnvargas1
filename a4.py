@@ -9,11 +9,17 @@ class TTTBoard:
         board - a list of '*'s, 'X's & 'O's. 'X's represent moves by player 'X', 'O's
             represent moves by player 'O' and '*'s are spots no one has yet played on
     """
-    def __init__(self, board):
-        self.board = board
-    def __str__(self)
-        s = f""
+    def __init__(self):
+        self.board = ["*"], ["*"], ["*"], ["*"], ["*"], ["*"], ["*"], ["*"], ["*"]
+        self.player = ""
+        self.pos = 0
+    def __str__(self):
+        s = f"{self.board[0]} {self.board[1]} {self.board[2]}\n" f"{self.board[3]} {self.board[4]} {self.board[5]} \n" f"{self.board[6]} {self.board[7]} {self.board[8]}"
+        return s
 
+    def make_move(self, player, pos):
+        self.player = player
+        self.pos = pos
     pass
 
 
